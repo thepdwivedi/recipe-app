@@ -1,0 +1,203 @@
+@media only screen and (max-width: 768px) {
+  .article {
+    width: 100% !important;
+  }
+  .event-title {
+    width: 91% !important;
+  }
+  .event-filter-item {
+    width: calc(90% * (1 / 1) - 5px - 5px) !important;
+  }
+  input[type="text"] {
+    width: 300px !important;
+  }
+  button {
+    border-radius: 5px !important;
+    width: 50% !important;
+    cursor: pointer;
+    border: 1px solid gainsboro !important;
+    margin: 6px 6px 0px 0px !important;
+    padding: 8px !important;
+  }
+}
+
+.site-title {
+  border: none;
+  background: rgb(252, 111, 3);
+  background: linear-gradient(
+    90deg,
+    rgb(252, 111, 3) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0px 5px;
+  font-weight: bold;
+}
+.about-content {
+  padding: 10px;
+}
+.home-profile-img {
+  border-radius: 10%;
+}
+.resume-profile-pig {
+  border-radius: 50%;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 50px;
+  width: 300px;
+}
+
+/*input[type=text]:focus {
+    border-color:#333;
+}*/
+input[type="date"] {
+  padding: 5px 10px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 50px;
+  width: 82%;
+}
+
+input[type="date"]:focus {
+  border-color: #333;
+}
+textarea {
+  padding: 5px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 4px;
+  background: rgb(250, 174, 10);
+  border: rgb(250, 174, 10) 2px solid;
+  border-radius: 10%;
+  color: white;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+.footer-link {
+  list-style-type: none;
+  text-align: justify;
+}
+.footer-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.event-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.article {
+  text-align: start;
+  width: calc(100% * (1 / 5) - 5px - 5px);
+  padding: 5px;
+}
+.event-header {
+  padding-left: 5px;
+}
+.event-filters {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-filter-item {
+  display: flex;
+  border-radius: 4px;
+  margin: 5px 15px 0px 0px;
+  border: 1px solid gainsboro;
+  padding: 0px 0px 0px 10px;
+  background: gainsboro;
+  white-space: nowrap;
+  color: black;
+  width: calc(100% * (1 / 5) - 5px - 5px);
+}
+.event-filter-buttons {
+  background: none;
+  border: none;
+}
+.event-title {
+  margin: 0;
+  font-weight: bold;
+  width: 97%;
+  padding: 16px 0px 5px 0px;
+  border-bottom: 2px solid orange;
+}
+.event-results {
+  padding: 10px 0px 5px 0px;
+}
+.event-filter-title {
+  padding: 10px 0px 5px 0px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card .container {
+  padding: 2px 16px;
+}
+.card img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+label {
+  width: 15%;
+  align-self: center;
+}
+
+button {
+  border: 2px solid gainsboro;
+  border-radius: 3px;
+  margin: 0px;
+  padding: 6px 25px;
+  cursor: pointer;
+  /* font-weight: bold;*/
+}
+button:first-child{
+    margin-right:2px;
+}
+button:hover{
+  border: 2px solid coral;
+  cursor: pointer;
+  color: coral;
+  /* font-weight: bold;*/
+}
+.hide-description {
+  display: none;
+}
+.card-button {
+  padding: 5px;
+}
+.card-button-1{
+    margin-right: 2px !important;
+}
+.card-icon {
+  width: 13px !important;
+  padding-right: 5px;
+}
+svg{
+  padding-right: 5px;
+}

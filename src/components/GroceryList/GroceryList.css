@@ -1,0 +1,47 @@
+.pop-up{
+    z-index: 17 !important;
+    position: absolute !important;
+    background: white;
+    right: 10px;
+    top: 6vh;
+    border-radius: 9px;
+    padding: 2px;
+    min-width: 25vw;
+    border: 2px solid orange;;
+}
+.hide-pop-up{
+    display: none;
+}
+.item{
+    padding: 10px 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item:first-child{
+    background-color: white !important;
+}
+.item:nth-child(even){
+    text-align: left;
+    background-color: white;
+}
+.item:nth-child(odd){
+    text-align: left;
+    background-color: lightgray;
+}
+.remove-item{
+    cursor: pointer;
+}
+.remove-item:hover{
+    color: coral;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .pop-up{
+        margin-top: 15vh !important;
+        width: 95% !important;
+    }
+}
