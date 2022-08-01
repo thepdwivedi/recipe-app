@@ -12,6 +12,7 @@ import { FaEye, FaEyeSlash, FaRegHeart, FaHeart } from "react-icons/fa";
 import PubSub from "pubsub-js";
 
 const RecipeCard = ({ recipe, onFavouriteChange }) => {
+  const [image_url, setImage_url] = useState(recipe.image);
   const user = useContext(UserContext); //User Context
   const [hideDescription, sethideDescription] = useState(true); // Show or hide Descriptions
   const [isFavourite, setIsFavourite] = useState(recipe.isFavourite); // Local Favourite Boolean
@@ -44,15 +45,18 @@ const RecipeCard = ({ recipe, onFavouriteChange }) => {
     setIsFavourite(recipe.isFavourite);
     PubSub.publish("FavouriteChange", "Update");
   };
-  //Toggele Show and hide desciption
+  //Toggle Show and hide desciption
   const handleShowHideToggle = () => {
     sethideDescription(!hideDescription);
+  };
+  const handleError = () => {
+    setImage_url(process.env.PUBLIC_URL + "/logo.png");
   };
 
   return (
     <article className="article">
       <div className="card">
-        <img src={recipe.image} alt="Avatar" />
+        <img src={image_url} alt="Avatar" onError={handleError} />
         <div className="container">
           <h4>
             <b>{recipe.name}</b>
