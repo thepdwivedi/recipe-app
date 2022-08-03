@@ -6,7 +6,7 @@ import UserContext from "./components/User/User";
 const user = {
   name: "Pankaj Dwivedi",
   theme: "dark-mode",
-  version: "v1.0",
+  version: "v1.1",
   groceryListName: "GroceryList",
   favouriteListName: "FavouriteList",
   appName: "Recipe App",
