@@ -12,6 +12,7 @@ import recipesdata from "../../data/recipes.json";
 import PubSub from "pubsub-js";
 function Body() {
   const user = useContext(UserContext); // User Context
+  const [noOfItems, setNoOfItems] = useState(10);
   const [recipes, setRecipes] = useState([]); //Temporary list of recipes either all items or filtered items
   const [originalRecipesData, setOriginalRecipesData] = useState([]);
 
@@ -74,6 +75,10 @@ function Body() {
     }
     return formatedTime;
   };
+  const hanldeLoadMore = () => {
+    setNoOfItems(noOfItems + 5);
+    setRecipes(originalRecipesData.slice(0, noOfItems)); //set data to temporary data source
+  };
   //this method will handle search input change
   const searchRecipe = (searchText) => {
     setRecipes(
@@ -109,7 +114,7 @@ function Body() {
       d.isFavourite = FavouriteList.has(d.recipeId); // add favourite list
     });
     setOriginalRecipesData(data); //set data to original data source
-    setRecipes(data); //set data to temporary data source
+    setRecipes(data.slice(0, noOfItems)); //set data to temporary data source
     // })
 
     // .catch((error) => {
@@ -135,6 +140,9 @@ function Body() {
             onFavouriteChange={handleFavouriteChange}
           />
         ))}
+        <div className="load-more">
+          <button onClick={hanldeLoadMore}> Load More</button>
+        </div>
       </div>
     </div>
   );

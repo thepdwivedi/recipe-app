@@ -104,7 +104,7 @@ input[type="submit"] {
 .article {
   text-align: start;
   width: calc(100% * (1 / 5) - 5px - 5px);
-  padding: 5px;
+  padding:  10px 5px 10px 5px;;
 }
 .event-header {
   padding-left: 5px;
