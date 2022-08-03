@@ -7,6 +7,7 @@ const Footer = () => {
       <ul>
         <li>{user.appName}</li>
         <li>{user.name}</li>
+        <li>Version: {user.version}</li>
       </ul>
     </div>
   );
